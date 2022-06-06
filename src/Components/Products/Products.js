@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import './Products.css';
 const Products = ({ pd }) => {
     const { id, name, price, description, image } = pd;
  
@@ -15,10 +16,10 @@ const Products = ({ pd }) => {
 
             <div>
                 <Card sx={{ maxWidth: 345 }}>
-                    <CardMedia
+                    <CardMedia  
                         component="img"
                         alt="productImg"
-                        height="140"
+                        height=" 150"
                         image={image}
                     />
                     <CardContent>
