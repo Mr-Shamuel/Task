@@ -8,7 +8,7 @@ const Home = () => {
 
 
     const [data, setData] = useState(allProducts);
-    // const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
     //filtering categories
     const filterResult = (items) => {
 
@@ -21,7 +21,9 @@ const Home = () => {
     }
 
     const handleAddProduct=(product)=>{
-        console.log("Products Added",product);
+       const newCart =  [...cart,product];
+       setCart(newCart);
+   
     }
 
 
@@ -32,7 +34,7 @@ const Home = () => {
         <div className="container">
 
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-2">
 
                     <div className="category_container">
                         <h4 className="text-center">All Categories</h4>
@@ -48,7 +50,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className="Products_container col-md-9">
+                <div className="Products_container col-md-8">
                     <div className="Products">
                         <h4 className="text-center"> Total products {allProducts.length}</h4>
                         <div className="row">
@@ -62,6 +64,11 @@ const Home = () => {
 
                     </div>
 
+                </div>
+
+                <div className="cart_container col-md-2">
+                    <div className="border"></div>
+                                <h1>Cart{cart.length}</h1>
                 </div>
 
 
