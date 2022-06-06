@@ -21,7 +21,7 @@ const Products = ({ pd }) => {
                         alt="productImg"
                         height=" 150"
                         image={image}
-                    />
+                    /> 
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
                             {name}
