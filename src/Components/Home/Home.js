@@ -8,7 +8,7 @@ const Home = () => {
 
 
     const [data, setData] = useState(allProducts);
-    const [search, setSearch] = useState('');
+    // const [products, setProducts] = useState([]);
     //filtering categories
     const filterResult = (items) => {
 
@@ -20,7 +20,9 @@ const Home = () => {
         console.log(result[0].name);
     }
 
-    //searching queries
+    const handleAddProduct=(product)=>{
+        console.log("Products Added",product);
+    }
 
 
 
@@ -52,7 +54,7 @@ const Home = () => {
                         <div className="row">
 
                             {
-                                (data).map(pd => <Products pd={pd} key={pd.id}></Products>)
+                                (data).map(pd => <Products pd={pd} handleAddProduct={handleAddProduct} key={pd.id}></Products>)
                             }
                             
                         </div>
