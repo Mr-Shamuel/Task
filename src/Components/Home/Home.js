@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import products from '../../db.json';
 import Products from '../Products/Products';
-import Search from '../Search/Search';
 import './Home.css';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Cart from '../Cart/Cart';
 import cate from '../../Img/cate.png';
 import Banner from '../Banner/Banner';

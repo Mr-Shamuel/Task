@@ -3,7 +3,8 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Navbars.css';
-import monico from '../../Img/img.png'
+import monico from '../../Img/img.png';
+
 const Navbars = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -22,7 +23,9 @@ const Navbars = () => {
             <Navbar expand="sm" className=" nav_bar py-2">
 
                 <img src={monico} alt="" />
-                <h1 className="text-center    m-0 p-0">Monico Mart</h1>
+                <h1 className="text-center"> Monico Mart 
+                    
+                </h1>
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

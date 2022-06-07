@@ -9,7 +9,7 @@ import {
 import Search from "./Components/Search/Search";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
-import Categories from "./Components/Categories/Categories";
+
 import Shipment from "./Components/Shipment/Shipment";
 import { createContext, useState } from "react";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
@@ -40,11 +40,6 @@ function App() {
               <Route path="/search">
                 <Search></Search>
               </Route>
-              <Route path="/categories">
-                <Categories></Categories>
-              </Route>
-
-
               <Route path="/login">
                 <Login></Login>
               </Route>

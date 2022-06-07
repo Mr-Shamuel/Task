@@ -36,7 +36,8 @@ const Footer = () => {
                                 loop: true
                             }}
 
-                        /> </span> </h6>
+                        /> 
+                        </span> </h6>
                         <h6> ©Copyright {(new Date()).getFullYear()}, All Rights Reserved.   </h6>
 
                     </div>

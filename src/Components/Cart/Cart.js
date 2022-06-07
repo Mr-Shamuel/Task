@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { CartDetails, UserContext } from '../../App';
+import { CartDetails  } from '../../App';
 const Cart = ({ cart }) => {
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+ 
     const [cartData, setCartData] = useContext(CartDetails);
     
    
@@ -12,6 +12,7 @@ const Cart = ({ cart }) => {
     const tax = Math.round(total / 30);
     const Total_order = total + tax;
     setCartData(Total_order);
+    console.log(cartData);
 
 
     let history = useHistory()

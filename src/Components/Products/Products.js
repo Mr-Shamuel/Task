@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './Products.css';
 const Products = (props) => {
-    const { id, name, price, description, image } = props.pd;
+    const {  name, price, description, image } = props.pd;
     console.log(props);
 
 

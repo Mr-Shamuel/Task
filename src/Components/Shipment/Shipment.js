@@ -2,9 +2,7 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import './Shipment.css';
 import swal from 'sweetalert';
-import Navbars from '../Navbars/Navbars';
 import { CartDetails, UserContext } from '../../App';
-import SendIcon from '@mui/icons-material/Send';
 const Shipment = () => {
     
     const { register, handleSubmit,  formState: { errors } } = useForm();
@@ -17,8 +15,8 @@ const Shipment = () => {
           });
     };
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [cartData, setCartData] = useContext(CartDetails);
+    const [loggedInUser ] = useContext(UserContext);
+    const [cartData ] = useContext(CartDetails);
  
     return (
 
