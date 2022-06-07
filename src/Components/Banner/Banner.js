@@ -71,7 +71,7 @@ const Banner = () => {
             </div>
             <div className="wrapper">
     
-            <h3 className="text-center d-flex mx-auto pt-2"> Monico 
+            <h1 className="text-center d-flex mx-auto  mt-5 pt-5"> Monico 
                 <span className="wrapper_child" >  <Typewriter
                     options={{
                         strings: ["Mart", "Shop", "Bazar"],
@@ -82,7 +82,7 @@ const Banner = () => {
                     }}
 
                 /> </span>
-            </h3> 
+            </h1> 
 
             </div>
 

@@ -40,8 +40,8 @@ const Search = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small">${pd.price}</Button>
-                                    <Button size="small" variant="contained" color="success"><ShoppingCartIcon></ShoppingCartIcon> Add to cart</Button>
+                                    {/* <Button size="small" className="d-flex mx-auto text-danger"></Button> */}
+                                    <Button size="small" variant="contained" color="success" className="d-flex mx-auto">Price: ${pd.price}</Button>
                                 </CardActions>
                             </Card>
 
