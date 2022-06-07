@@ -16,7 +16,7 @@ const Shipment = () => {
  
     return (
 
-        <div className="container">
+        <div className="container"> 
             <h3 className="text-center">Please Complete your order by filling up this form</h3>
             <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
 

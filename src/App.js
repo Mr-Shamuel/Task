@@ -11,11 +11,14 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Categories from "./Components/Categories/Categories";
 import Shipment from "./Components/Shipment/Shipment";
+import { createContext, useState } from "react";
 
+export const UserContext = createContext();
 function App() {
-
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <div>
+    <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
+      <h3>email: {loggedInUser.email}</h3>
       
       
       <Router>
@@ -52,7 +55,7 @@ function App() {
 
         </Switch>
       </Router>
-    </div>
+      </UserContext.Provider>
   );
 }
 
