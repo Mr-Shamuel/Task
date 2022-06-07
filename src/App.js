@@ -15,51 +15,55 @@ import { createContext, useState } from "react";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Footer from "./Components/Footer/Footer";
 
+export const CartDetails = createContext();
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [cartData, setCartData] = useState({})
 
   return (
-    <div className="mainCon" style={{  color: "black" }}  >
-      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-        {/* <h3>User: {loggedInUser.displayName}</h3> */}
-        <h1 className="text-center    m-0 p-0">Monico Mart</h1>
+    <div className="mainCon" style={{ color: "black" }}  >
+      <CartDetails.Provider value={[cartData, setCartData]} >
+        <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
 
-        <Router>
-          <Navbars></Navbars>
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
-            <Route path="/search">
-              <Search></Search>
-            </Route>
-            <Route path="/categories">
-              <Categories></Categories>
-            </Route>
-
-
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <Route path="/register">
-              <Register></Register>
-            </Route>
-            <PrivateRoute path="/shipment">
-              <Shipment></Shipment>
-            </PrivateRoute>
-
-
-
-
-          </Switch>
+       
           
-          <Footer></Footer>
-        </Router>
-      </UserContext.Provider>
+          <Router>
+            <Navbars></Navbars>
+            <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route path="/home">
+                <Home></Home>
+              </Route>
+              <Route path="/search">
+                <Search></Search>
+              </Route>
+              <Route path="/categories">
+                <Categories></Categories>
+              </Route>
+
+
+              <Route path="/login">
+                <Login></Login>
+              </Route>
+              <Route path="/register">
+                <Register></Register>
+              </Route>
+              <PrivateRoute path="/shipment">
+                <Shipment></Shipment>
+              </PrivateRoute>
+
+
+
+
+            </Switch>
+
+            <Footer></Footer>
+          </Router>
+        </UserContext.Provider>
+      </CartDetails.Provider>
     </div>
   );
 }

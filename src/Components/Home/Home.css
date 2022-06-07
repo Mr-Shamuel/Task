@@ -18,3 +18,13 @@
     background: linear-gradient(to left, rgba(92, 92, 197, 0.3), rgba(170, 143, 163, 0.3)) no-repeat center/cover;
 
 }
+.category_container button{
+    border: 1px solid crimson;
+    font-weight: bold;
+    background-color:transparent;
+}
+.category_container button:hover{
+   background-color:crimson;
+   color: whitesmoke;
+    font-weight: bold;
+}

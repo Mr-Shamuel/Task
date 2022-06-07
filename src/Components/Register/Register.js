@@ -78,7 +78,7 @@ const Register = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container mb-5">
             <Grid container spacing={2}>
                 <Grid item sx={{ mt: 8 }} xs={12} md={6}>
                     <Typography variant="body1" gutterBottom>Register</Typography>

@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { CartDetails, UserContext } from '../../App';
 const Cart = ({ cart }) => {
-    console.log(cart);
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [cartData, setCartData] = useContext(CartDetails);
+    
+   
     const total = cart.reduce((total, element) => total + parseInt(element.price), 0);
     const tax = Math.round(total / 30);
     const Total_order = total + tax;
-    console.log(total);
+    setCartData(Total_order);
 
 
     let history = useHistory()
     const handlePay = (bedType) => {
         history.push(`/shipment`);
     }
+
     return (
         <div className=" cart_">
             <div className="borde ">

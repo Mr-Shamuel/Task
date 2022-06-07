@@ -16,7 +16,7 @@ const Search = () => {
 
         <div className="container">
             <h6 className="text-center">Search Anything.....</h6>
-            <input type="text" placeholder="Search.." onChange={(e) => setQuery(e.target.value)} name="" id="" className="form-control w-50 mx-auto my-5 text-success " />
+            <input type="text" placeholder="Search by product name.." onChange={(e) => setQuery(e.target.value)} name="" id="" className="form-control w-50 mx-auto my-5 text-success " />
             <div className="row">
 
                 {
