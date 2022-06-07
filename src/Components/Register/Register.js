@@ -7,6 +7,7 @@ import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase
 import { initializeApp } from "firebase/app";
 import firebaseConfig from '../Login/firebase.config';
 import swal from 'sweetalert';
+import regimg from '../../Img/register.png';
 
 
 
@@ -78,7 +79,8 @@ const Register = () => {
     }
 
     return (
-        <div className="container mb-5">
+        <div className="container  ">
+            <div className="con">
             <Grid container spacing={2}>
                 <Grid item sx={{ mt: 8 }} xs={12} md={6}>
                     <Typography variant="body1" gutterBottom>Register</Typography>
@@ -119,10 +121,12 @@ const Register = () => {
 
 
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    {/* <img style={{ width: '100%' }} src={register} alt="" /> */}
-                </Grid>
+                                <Grid item xs={12} md={6}>
+                                    <img style={{ width: '50%',display:"block",margin:"30px auto" }} src={regimg} alt="" />
+                                    
+                                </Grid>
             </Grid>
+            </div>
         </div>
     );
 };

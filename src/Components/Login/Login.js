@@ -7,7 +7,7 @@ import {Typography, TextField, Button,Grid } from '@mui/material';
 import { NavLink, useHistory, useLocation } from 'react-router-dom';
  
 import { UserContext } from '../../App';
- 
+ import logimg from '../../Img/loinimg.png'
 
 
 const Login = () => {
@@ -68,8 +68,7 @@ const handleLoginSubmit= (e)=>{
       // ...
     })
     .catch((error) => {
-    //   const errorCode = error.code;
-    //   const errorMessage = error.message;
+ 
     });
     
 }
@@ -111,7 +110,7 @@ const handleLoginSubmit= (e)=>{
                     <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    {/* <img className="img-fluid "  src=  alt="" /> */}
+                <img style={{ width: '50%',display:"block",margin:"30px auto" }} src={logimg} alt="" />
                 </Grid>
             </Grid>
 
