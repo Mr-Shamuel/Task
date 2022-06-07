@@ -13,3 +13,8 @@
     top: 0;
    
 }
+.mainCon{
+    
+    background: linear-gradient(to left, rgba(92, 92, 197, 0.3), rgba(170, 143, 163, 0.3)) no-repeat center/cover;
+
+}

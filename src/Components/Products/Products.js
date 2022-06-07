@@ -17,7 +17,7 @@ const Products = (props) => {
         <div className="col-md-4 my-3 product">
 
             <div>
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className=" " sx={{ maxWidth: 345 }}>
                     <CardMedia
                         component="img"
                         alt="productImg"

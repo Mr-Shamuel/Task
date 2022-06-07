@@ -33,20 +33,20 @@ const Home = () => {
 
 
     return (
-        <div className="container">
+        <div className="  ">
 
             <div className="row">
                 <div className="col-md-2">
 
                     <div className="category_container">
                         <h4 className="text-center">All Categories</h4>
-                        <button className="btn btn-info w-100 mb-4" onClick={() => filterResult('Meat')}>Meat</button>
-                        <button className="btn btn-info w-100 mb-4" onClick={() => filterResult('Fish')}>Fish</button>
-                        <button className="btn btn-info w-100 mb-4" onClick={() => filterResult('Milk')}>Milk</button>
-                        <button className="btn btn-info w-100 mb-4" onClick={() => filterResult('Beverages')}>Beverages</button>
-                        <button className="btn btn-info w-100 mb-4" onClick={() => filterResult('Snacks')}>Snacks</button>
-                        <button className="btn btn-info w-100 mb-4" onClick={() => filterResult('Fruits')}>Fruits</button>
-                        <button className="btn btn-info w-100 mb-4" onClick={() => setData(allProducts)}>All</button>
+                        <button className="btn btn-outline-warning text-dark w-100 mb-4" onClick={() => filterResult('Meat')}>Meat</button>
+                        <button className="btn btn-outline-warning text-dark  w-100 mb-4" onClick={() => filterResult('Fish')}>Fish</button>
+                        <button className="btn btn-outline-warning text-dark  w-100 mb-4" onClick={() => filterResult('Milk')}>Milk</button>
+                        <button className="btn btn-outline-warning text-dark  w-100 mb-4" onClick={() => filterResult('Beverages')}>Beverages</button>
+                        <button className="btn btn-outline-warning text-dark  w-100 mb-4" onClick={() => filterResult('Snacks')}>Snacks</button>
+                        <button className="btn btn-outline-warning text-dark  w-100 mb-4" onClick={() => filterResult('Fruits')}>Fruits</button>
+                        <button className="btn btn-outline-warning text-dark  w-100 mb-4" onClick={() => setData(allProducts)}>All</button>
 
 
                     </div>

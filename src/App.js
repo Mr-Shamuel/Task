@@ -4,7 +4,7 @@ import Navbars from "./Components/Navbars/Navbars";
 import {
   BrowserRouter as Router,
   Switch,
-  Route 
+  Route
 } from "react-router-dom";
 import Search from "./Components/Search/Search";
 import Login from "./Components/Login/Login";
@@ -13,49 +13,54 @@ import Categories from "./Components/Categories/Categories";
 import Shipment from "./Components/Shipment/Shipment";
 import { createContext, useState } from "react";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Footer from "./Components/Footer/Footer";
 
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  
+
   return (
-    <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
-      <h3>User: {loggedInUser.displayName}</h3>
-      
-      
-      <Router>
-      <Navbars></Navbars>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/search">
-            <Search></Search>
-          </Route>
-          <Route path="/categories">
-            <Categories></Categories>
-          </Route>
+    <div className="mainCon" style={{  color: "black" }}  >
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        {/* <h3>User: {loggedInUser.displayName}</h3> */}
+        <h1 className="text-center    m-0 p-0">Monico Mart</h1>
+
+        <Router>
+          <Navbars></Navbars>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/search">
+              <Search></Search>
+            </Route>
+            <Route path="/categories">
+              <Categories></Categories>
+            </Route>
 
 
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/register">
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
               <Register></Register>
-          </Route>
-          <PrivateRoute path="/shipment">
+            </Route>
+            <PrivateRoute path="/shipment">
               <Shipment></Shipment>
-          </PrivateRoute>
-
-       
+            </PrivateRoute>
 
 
-        </Switch>
-      </Router>
+
+
+          </Switch>
+          
+          <Footer></Footer>
+        </Router>
       </UserContext.Provider>
+    </div>
   );
 }
 

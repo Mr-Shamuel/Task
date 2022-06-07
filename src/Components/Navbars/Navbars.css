@@ -9,8 +9,8 @@
 }
 
 .nav_bar a {
-    /* background-color:#7aa3e6; */
-    /* color: whitesmoke; */
+ 
+    color: black;
     transition: 0.4s ease;
     font-size: 20px;
     font-weight: bold;
@@ -22,9 +22,9 @@
 
 
     transition: 0.7s ease;
-    color:  rgb(33, 32, 32);
-    background-color:tomato;
-    border-radius: 10px;
+    color:  whitesmoke;
+    background-color:crimson;
+    border-radius: 7px;
     
 
 

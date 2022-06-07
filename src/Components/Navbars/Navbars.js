@@ -13,13 +13,13 @@ const Navbars = () => {
         setLoggedInUser({})
     }
     return (
-        <div className="">
+        <div className="   ">
             {/* Navbar start here  */}
 
 
 
 
-            <Navbar expand="sm" className="nav_bar py-2">
+            <Navbar expand="sm" className=" nav_bar py-2">
 
 
 
@@ -28,17 +28,17 @@ const Navbars = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto mx-4 my-3 ">
 
-                        <NavLink className="p-2 mx-3 " style={{ textDecoration: 'none' }} to="/home">Home</NavLink>
-                        <NavLink className="p-2 mx-3" style={{ textDecoration: 'none' }} to="/search">Search</NavLink>
-                        <NavLink className="p-2 mx-3" style={{ textDecoration: 'none' }} to="/shipment">Shipment</NavLink>
+                        <NavLink className="p-2 mx-3    " style={{ textDecoration: 'none' }} to="/home">Home</NavLink>
+                        <NavLink className="p-2 mx-3  " style={{ textDecoration: 'none' }} to="/search">Search</NavLink>
+                        <NavLink className="p-2 mx-3  " style={{ textDecoration: 'none' }} to="/shipment">Shipment</NavLink>
 
                         
                         {
-                            loggedInUser.email ? <NavLink onClick={handleSignOUt} className="p-2 mx-3" style={{ textDecoration: 'none', backgroundColor: 'tomato', borderRadius: "10px", color: 'whitesmoke' }} to="/login">logout </NavLink> :
-                                <NavLink className="p-2 mx-3" style={{ textDecoration: 'none' }} to="/login">Login </NavLink>
+                            loggedInUser.email ? <NavLink onClick={handleSignOUt} className="p-2 mx-3  " style={{ textDecoration: 'none', backgroundColor: 'tomato', borderRadius: "10px", color: 'whitesmoke' }} to="/login">logout </NavLink> :
+                                <NavLink className="p-2 mx-3  " style={{ textDecoration: 'none' }} to="/login">Login </NavLink>
                         }
 
-                        <NavLink className="p-2 mx-3" style={{ textDecoration: 'none' }} to="/register">Register </NavLink>
+                        <NavLink className="p-2 mx-3  " style={{ textDecoration: 'none' }} to="/register">Register </NavLink>
 
 
 
