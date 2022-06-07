@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className="col-md-6 col-sm-12 text-center">
                     <div className="social  ">
                         <h3>Follow me</h3>
-                        <a  href="https://www.facebook.com/Mr.Shamuel" className="mx-2" rel="noreferrer" target="_blank" ><FacebookOutlinedIcon className=""></FacebookOutlinedIcon></a>
+                        <a href="https://www.facebook.com/Mr.Shamuel" className="mx-2" rel="noreferrer" target="_blank" ><FacebookOutlinedIcon className=""></FacebookOutlinedIcon></a>
                         <a href="https://twitter.com/sam71060758" className="mx-2" rel="noreferrer" target="_blank"><TwitterIcon className=" "></TwitterIcon></a>
                         <a href="https://www.instagram.com/shamuel_sam/" className="mx-2" rel="noreferrer" target="_blank"><InstagramIcon className=" "></InstagramIcon></a>
                         <a href="https://github.com/mr-shamuel" className="mx-2" rel="noreferrer" target="_blank"><GitHubIcon className=" "></GitHubIcon></a>
@@ -25,18 +25,9 @@ const Footer = () => {
 
                 </div>
                 <div className="col-md-6 col-sm-12 d-flex justify-content-left  align-items-center ">
-                    <div className="social "> 
+                    <div className="social ">
 
-                        <h6 className="xx mb-0"> Designed & Developed by &nbsp; <span className="text-warning"> <Typewriter
-                            options={{
-                                strings: ["Md. Shamuel Molla"],
- 
-                                autoStart: true,
-                                delay: 70,
-                                loop: true
-                            }}
-
-                        /> 
+                        <h6 className="xx mb-0"> Designed & Developed by &nbsp; <span className="text-warning"> Md. Shamuel Molla
                         </span> </h6>
                         <h6> ©Copyright {(new Date()).getFullYear()}, All Rights Reserved.   </h6>
 
