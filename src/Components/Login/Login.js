@@ -9,7 +9,7 @@ import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
 import logimg from '../../Img/loinimg.png'
 import Zoom from 'react-reveal/Zoom';
-
+import swal from 'sweetalert';
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     console.log(loggedInUser);
@@ -68,63 +68,69 @@ const Login = () => {
                 // ...
             })
             .catch((error) => {
-
+                swal({
+                    title: "Warning !",
+                    text: "Insert Valid Information",
+                    icon: "error",
+                    button: "Ok",
+                });
             });
+ 
 
-    }
-
-
-    return (
-        <div className="container">
-
-            <Zoom top>
-
-                <Grid container spacing={2} >
-                    <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                        <Typography variant="body1" gutterBottom>Login</Typography>
-                        <form onSubmit={handleLoginSubmit}>
-                            <TextField
-                                sx={{ width: '75%', m: 1 }}
-                                id="standard-basic"
-                                label="Your Email"
-                                name="email"
-                                onChange={handleOnChange}
-                                variant="standard" />
-                            <TextField
-                                sx={{ width: '75%', m: 1 }}
-                                id="standard-basic"
-                                label="Your Password"
-                                type="password"
-                                name="password"
-                                onChange={handlepassOnChange}
-                                variant="standard" />
-
-                            <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
-                            <NavLink
-                                style={{ textDecoration: 'none' }}
-                                to="/register">
-                                <Button variant="text">New User? Please Register</Button>
-                            </NavLink>
+}
 
 
-                        </form>
-                        <p>------------------------</p>
-                        <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
-                    </Grid>
+return (
+    <div className="container">
+
+        <Zoom top>
+
+            <Grid container spacing={2} >
+                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
+                    <Typography variant="body1" gutterBottom>Login</Typography>
+                    <form onSubmit={handleLoginSubmit}>
+                        <TextField
+                            sx={{ width: '75%', m: 1 }}
+                            id="standard-basic"
+                            label="Your Email"
+                            name="email"
+                            onChange={handleOnChange}
+                            variant="standard" />
+                        <TextField
+                            sx={{ width: '75%', m: 1 }}
+                            id="standard-basic"
+                            label="Your Password"
+                            type="password"
+                            name="password"
+                            onChange={handlepassOnChange}
+                            variant="standard" />
+
+                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                        <NavLink
+                            style={{ textDecoration: 'none' }}
+                            to="/register">
+                            <Button variant="text">New User? Please Register</Button>
+                        </NavLink>
 
 
-
-                    <Grid item xs={12} md={6}>
-                        <img style={{ width: '50%', display: "block", margin: "30px auto" }} src={logimg} alt="" />
-                    </Grid>
-
-                </Grid> </Zoom>
+                    </form>
+                    <p>------------------------</p>
+                    <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+                </Grid>
 
 
 
+                <Grid item xs={12} md={6}>
+                    <img style={{ width: '50%', display: "block", margin: "30px auto" }} src={logimg} alt="" />
+                </Grid>
 
-        </div>
-    );
+            </Grid> </Zoom>
+
+
+
+
+    </div>
+);
 };
 
 export default Login;
