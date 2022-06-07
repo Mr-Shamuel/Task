@@ -12,13 +12,15 @@ import Register from "./Components/Register/Register";
 import Categories from "./Components/Categories/Categories";
 import Shipment from "./Components/Shipment/Shipment";
 import { createContext, useState } from "react";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  
   return (
     <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
-      <h3>email: {loggedInUser.email}</h3>
+      <h3>User: {loggedInUser.displayName}</h3>
       
       
       <Router>
@@ -44,13 +46,11 @@ function App() {
           <Route path="/register">
               <Register></Register>
           </Route>
-          <Route path="/shipment">
+          <PrivateRoute path="/shipment">
               <Shipment></Shipment>
-          </Route>
+          </PrivateRoute>
 
-          {/* <PrivateRoute path="/postform">
-            <PostForm></PostForm>
-          </PrivateRoute> */}
+       
 
 
         </Switch>
