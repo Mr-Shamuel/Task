@@ -9,7 +9,7 @@ import firebaseConfig from '../Login/firebase.config';
 import swal from 'sweetalert';
 import regimg from '../../Img/register.png';
 
-
+import Zoom from 'react-reveal/Zoom';
 
 // const app  =  initializeApp(firebaseConfig);
 const Register = () => {
@@ -42,23 +42,23 @@ const Register = () => {
                 setUserName();
                 console.log(user);
 
- 
+
                 swal({
                     title: "Account successfully Registered",
-                     
+
                     icon: "success",
                     button: "Ok",
-                  });
+                });
                 // ...
             })
             .catch((error) => {
-                 
+
                 swal({
                     title: "Warning !",
                     text: "Insert Valid Information",
                     icon: "error",
                     button: "Ok",
-                  });
+                });
             });
 
         e.preventDefault();
@@ -80,53 +80,56 @@ const Register = () => {
 
     return (
         <div className="container  ">
-            <div className="con">
-            <Grid container spacing={2}>
-                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>Register</Typography>
-                    {<form onSubmit={handleLoginSubmit}>
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Name"
-                            name="name"
-                            onBlur={handleNameOnBlur}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Email"
-                            name="email"
-                            type="email"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Password"
-                            type="password"
-                            name="password"
-                            onBlur={handleOnBlur2}
-                            variant="standard" />
+            <Zoom>
+                <div className="con">
+                    <Grid container spacing={2}>
+                        <Grid item sx={{ mt: 8 }} xs={12} md={6}>
+                            <Typography variant="body1" gutterBottom>Register</Typography>
+                            {<form onSubmit={handleLoginSubmit}>
+                                <TextField
+                                    sx={{ width: '75%', m: 1 }}
+                                    id="standard-basic"
+                                    label="Your Name"
+                                    name="name"
+                                    onBlur={handleNameOnBlur}
+                                    variant="standard" />
+                                <TextField
+                                    sx={{ width: '75%', m: 1 }}
+                                    id="standard-basic"
+                                    label="Your Email"
+                                    name="email"
+                                    type="email"
+                                    onBlur={handleOnBlur}
+                                    variant="standard" />
+                                <TextField
+                                    sx={{ width: '75%', m: 1 }}
+                                    id="standard-basic"
+                                    label="Your Password"
+                                    type="password"
+                                    name="password"
+                                    onBlur={handleOnBlur2}
+                                    variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
-                        <NavLink
-                            style={{ textDecoration: 'none' }}
-                            to="/login">
-                            <Button variant="text">Already Registered? Please Login</Button>
-                        </NavLink>
-                    </form>}
+                                <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
+                                <NavLink
+                                    style={{ textDecoration: 'none' }}
+                                    to="/login">
+                                    <Button variant="text">Already Registered? Please Login</Button>
+                                </NavLink>
+                            </form>}
 
 
 
 
-                </Grid>
-                                <Grid item xs={12} md={6}>
-                                    <img style={{ width: '50%',display:"block",margin:"30px auto" }} src={regimg} alt="" />
-                                    
-                                </Grid>
-            </Grid>
-            </div>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <img style={{ width: '50%', display: "block", margin: "30px auto" }} src={regimg} alt="" />
+
+                        </Grid>
+                    </Grid>
+                </div>
+            </Zoom>
+
         </div>
     );
 };
