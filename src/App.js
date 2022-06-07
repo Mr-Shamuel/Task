@@ -10,6 +10,7 @@ import Search from "./Components/Search/Search";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Categories from "./Components/Categories/Categories";
+import Shipment from "./Components/Shipment/Shipment";
 
 function App() {
 
@@ -39,6 +40,9 @@ function App() {
           </Route>
           <Route path="/register">
               <Register></Register>
+          </Route>
+          <Route path="/payment">
+              <Shipment></Shipment>
           </Route>
 
           {/* <PrivateRoute path="/postform">

@@ -3,6 +3,8 @@ import products from '../../db.json';
 import Products from '../Products/Products';
 import Search from '../Search/Search';
 import './Home.css';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Cart from '../Cart/Cart';
 const Home = () => {
     const allProducts = products.products;
 
@@ -66,9 +68,9 @@ const Home = () => {
 
                 </div>
 
-                <div className="cart_container col-md-2">
-                    <div className="border"></div>
-                                <h1>Cart{cart.length}</h1>
+                <div className="cart_container borders col-md-2">
+                    <Cart cart={cart}></Cart>
+                                
                 </div>
 
 

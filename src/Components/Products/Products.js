@@ -26,7 +26,7 @@ const Products = (props) => {
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            {name}
+                           <h5> {name}</h5>
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
                             {description}
