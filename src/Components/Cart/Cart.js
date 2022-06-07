@@ -11,7 +11,7 @@ const Cart = ({ cart }) => {
 
     let history = useHistory()
     const handlePay = (bedType) => {
-        history.push(`/payment`,{params:cart});
+        history.push(`/shipment`);
     }
     return (
         <div className=" cart_">

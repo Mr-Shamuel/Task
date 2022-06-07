@@ -41,7 +41,7 @@ function App() {
           <Route path="/register">
               <Register></Register>
           </Route>
-          <Route path="/payment">
+          <Route path="/shipment">
               <Shipment></Shipment>
           </Route>
 
